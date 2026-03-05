@@ -1,2 +1,2 @@
-# bash-tools
-boite a outils bash
+# je s'appelle GROOT
+Cliver - script factorielle
