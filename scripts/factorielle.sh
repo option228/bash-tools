@@ -1,7 +1,7 @@
 #!/bin/bash
 read -p "Entrez un entier positif : " n
 
-Vérification
+#Vérification
 if ! [[ "$n" =~ ^[0-9]+$ ]]; then
     echo "Erreur : '$n' n'est pas un entier positif."
     exit 1
