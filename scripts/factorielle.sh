@@ -1,20 +1,15 @@
 #!/bin/bash
+read -p "Entrez un entier positif : " n
 
-echo "entrez un nombre entier positif :"
-read nombre
-
-if ! [[ "$nombre" =~ ^[0-9]+$ ]]
-then
-    echo "erreur : ce n est pas un entier positif"
+Vérification
+if ! [[ "$n" =~ ^[0-9]+$ ]]; then
+    echo "Erreur : '$n' n'est pas un entier positif."
     exit 1
 fi
 
-resultat=1
-i=1
-while [ $i -le $nombre ]
-do
-    resultat=$((resultat * i))
-    i=$((i + 1))
+fact=1
+for (( i=2; i<=n; i++ )); do
+    fact=$((fact * i))
 done
 
-echo "factorielle de $nombre est : $resultat"
+echo "Factorielle de $n = $fact"
