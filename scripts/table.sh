@@ -1,11 +1,13 @@
 #!/bin/bash
+read -p "Entrez un entier : " n
 
-echo "entrez un nombre :"
-read nombre
+if ! [[ "$n" =~ ^-?[0-9]+$ ]]; then
+    echo "Erreur : '$n' n'est pas un entier."
+    exit 1
+fi
 
-i=1
-while [ $i -le 10 ]
-do
-    echo "$nombre x $i = $((nombre * i))"
-    i=$((i + 1))
+echo "Table de multiplication de $n :"
+for (( i=1; i<=10; i++ )); do
+    echo "$n x $i = $((n * i))"
 done
+EOF
